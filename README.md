@@ -1,2 +1,2 @@
-# DefaultCPUSite
+# DefaultCPU
 This is my website :)
