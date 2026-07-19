@@ -1,10 +1,125 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>~*~ DefaultCPU's Page ~*~</title>
 <link rel="stylesheet" type="text/css" href="css/styles.css">
-<html>
+</head>
 <body>
-I am DefaultCPU, AKA California Man
-Please give me money to change my life at my Venmo: @BasuraDavid
-<img src="https://media0.giphy.com/media/SfPh5DM80nCaPk7m2x/giphy.webp?cid=ecf05e47b4reoy6e43e3bgrnemc37v4rh31d2j7a2ieke8w7&ep=v1_gifs_search&rid=giphy.webp&ct=g">
-<img src="https://media1.tenor.com/m/rC_mbGxsqu8AAAAd/dawg-skull-emoji.gif">
+<canvas id="bg-canvas"></canvas>
+
+<marquee class="top-marquee" behavior="scroll" direction="left" scrollamount="6">
+  ✨ WELCOME 2 MY PAGE ✨ under construction since forever ✨ leave a comment in the guestbook ✨ don't forget to sign in ✨ best viewed at 1024x768 ✨
+</marquee>
+
+<div class="page">
+
+  <header class="profile-header">
+    <div class="polaroid header-photo">
+      <img src="https://media1.tenor.com/m/rC_mbGxsqu8AAAAd/dawg-skull-emoji.gif" alt="California Man avatar">
+      <span class="caption">it's me fr</span>
+    </div>
+    <div class="header-text">
+      <h1 class="rainbow-text">DefaultCPU</h1>
+      <h2 class="subtitle">AKA California Man 🌴</h2>
+      <p class="status">status: <span class="blink">online now</span> &middot; mood: caffeinated &middot; location: San Joaquin Valley, CA</p>
+    </div>
+    <div class="polaroid header-photo tilt-right">
+      <img src="https://media1.tenor.com/m/K-ubEkNBjGIAAAAd/california-southerncalifornia.gif" alt="palm trees gif">
+      <span class="caption">mood</span>
+    </div>
+  </header>
+
+  <div class="glitter-divider" aria-hidden="true"></div>
+
+  <main class="layout">
+
+    <aside class="sidebar">
+
+      <section class="box contact-box">
+        <h3 class="box-title">Contact Box</h3>
+        <ul class="contact-list">
+          <li><a href="https://github.com/DefaultCPU" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://venmo.com/BasuraDavid" target="_blank" rel="noopener">Venmo: @BasuraDavid 💸</a></li>
+        </ul>
+        <p class="venmo-note">please give me money to change my life, no pressure tho</p>
+      </section>
+
+      <section class="box now-playing-box">
+        <h3 class="box-title">🎵 Now Playing</h3>
+        <div class="now-playing">
+          <div class="cassette">📼</div>
+          <div class="track-info">
+            <p class="track-name">[ music coming soon ]</p>
+            <p class="track-artist">check back later fr</p>
+          </div>
+        </div>
+        <!-- future: <audio autoplay loop src="music/theme.mp3"></audio> -->
+        <p class="tiny-note">volume's off for now, one day this'll autoplay and scare you</p>
+      </section>
+
+      <section class="box counter-box">
+        <h3 class="box-title">Visitor Counter</h3>
+        <div id="visitor-counter" class="odometer">000000</div>
+        <p class="tiny-note">(counts on this browser only, this ain't a real backend, don't @ me)</p>
+      </section>
+
+    </aside>
+
+    <div class="main-column">
+
+      <section class="box about-box">
+        <h3 class="box-title">About Me</h3>
+        <p>I am DefaultCPU, AKA California Man. Born and raised somewhere between an almond
+        orchard and a 99 onramp. I write code, I break code, I occasionally fix code. This
+        page is my little corner of the internet, MySpace-style, because Top 8 friend
+        rankings were a superior social technology and we should never have let them go.</p>
+        <p>Scroll down for a live feed of what I've been building and a mini road trip
+        through the Valley I call home.</p>
+      </section>
+
+      <section class="box repos-box">
+        <h3 class="box-title">💻 My Repos (live from GitHub)</h3>
+        <div id="repo-grid" class="repo-grid">
+          <p class="loading-text">loading repos... 📡</p>
+        </div>
+      </section>
+
+      <section class="box gallery-box">
+        <h3 class="box-title">📸 San Joaquin Valley Road Trip</h3>
+        <p class="gallery-intro">landmarks from around the Valley, all real photos, all properly credited (I'm not a monster)</p>
+        <div class="gallery-grid" id="gallery-grid"></div>
+      </section>
+
+      <section class="box guestbook-box">
+        <h3 class="box-title">📖 Guestbook</h3>
+        <div class="comment">
+          <p class="comment-author">xXx_yosemite_sam_xXx <span class="comment-date">wrote:</span></p>
+          <p class="comment-body">yo this page is fire, add me to top 8??</p>
+        </div>
+        <div class="comment">
+          <p class="comment-author">tulare_county_og <span class="comment-date">wrote:</span></p>
+          <p class="comment-body">the almond orchard slander is CRAZY but ok</p>
+        </div>
+        <div class="comment">
+          <p class="comment-author">bakersfield_bot9000 <span class="comment-date">wrote:</span></p>
+          <p class="comment-body">venmo sent, change ya life king 👑</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div class="glitter-divider" aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <p>best viewed in Netscape Navigator 4.0 at 1024x768 &middot; this page uses 100% recycled electrons</p>
+    <p class="rainbow-text small">&copy; DefaultCPU, somewhere in the 559/661</p>
+  </footer>
+
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
