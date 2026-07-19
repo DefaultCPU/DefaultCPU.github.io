@@ -49,14 +49,15 @@
       <section class="box now-playing-box">
         <h3 class="box-title">🎵 Now Playing</h3>
         <div class="now-playing">
-          <div class="cassette">📼</div>
+          <div class="cassette" id="cassette-icon">📼</div>
           <div class="track-info">
-            <p class="track-name">[ music coming soon ]</p>
-            <p class="track-artist">check back later fr</p>
+            <p class="track-name" id="track-name">[ no track loaded ]</p>
+            <p class="track-artist" id="track-artist">drop an mp3 in /music</p>
           </div>
         </div>
-        <!-- future: <audio autoplay loop src="music/theme.mp3"></audio> -->
-        <p class="tiny-note">volume's off for now, one day this'll autoplay and scare you</p>
+        <button id="play-toggle" class="play-toggle" type="button" disabled>▶ Play</button>
+        <audio id="bg-music" loop preload="none" src="music/theme.mp3"></audio>
+        <p class="tiny-note">browsers block autoplay-with-sound, so you gotta hit play yourself, no scaring anyone</p>
       </section>
 
       <section class="box counter-box">

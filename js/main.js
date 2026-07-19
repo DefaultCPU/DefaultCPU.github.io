@@ -122,6 +122,56 @@
     el.textContent = String(count).padStart(6, "0");
   }
 
+  // ---------- Music player ----------
+  // Drop an mp3 at music/theme.mp3 and this lights up automatically.
+  // Browsers block autoplay-with-sound, so playback always starts from
+  // an explicit click on the button (a real user gesture).
+
+  function initMusicPlayer() {
+    const audio = document.getElementById("bg-music");
+    const button = document.getElementById("play-toggle");
+    const trackName = document.getElementById("track-name");
+    const trackArtist = document.getElementById("track-artist");
+    const cassette = document.getElementById("cassette-icon");
+
+    audio.addEventListener("loadedmetadata", () => {
+      button.disabled = false;
+      trackName.textContent = "theme.mp3";
+      trackArtist.textContent = "click play →";
+    });
+
+    audio.addEventListener("error", () => {
+      button.disabled = true;
+      trackName.textContent = "[ no track loaded ]";
+      trackArtist.textContent = "drop an mp3 in /music";
+    });
+
+    audio.addEventListener("play", () => {
+      button.textContent = "⏸ Pause";
+      cassette.textContent = "🎶";
+      trackArtist.textContent = "now playing...";
+    });
+
+    audio.addEventListener("pause", () => {
+      button.textContent = "▶ Play";
+      cassette.textContent = "📼";
+      trackArtist.textContent = "paused";
+    });
+
+    button.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play().catch(() => {
+          trackArtist.textContent = "couldn't play, try again";
+        });
+      } else {
+        audio.pause();
+      }
+    });
+
+    // preload="none" means we have to nudge it to check the file exists
+    audio.load();
+  }
+
   // ---------- Dynamic background: drifting sparkle field ----------
 
   function initBackgroundCanvas() {
@@ -149,6 +199,9 @@
 
     function frame(time) {
       ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = "#7dffb3";
+      ctx.shadowColor = "#39ff88";
+      ctx.shadowBlur = 6;
       for (const s of sparkles) {
         s.y -= s.speed;
         if (s.y < -20) {
@@ -161,6 +214,7 @@
         ctx.fillText(s.char, s.x, s.y);
       }
       ctx.globalAlpha = 1;
+      ctx.shadowBlur = 0;
       requestAnimationFrame(frame);
     }
 
@@ -211,5 +265,6 @@
     updateVisitorCounter();
     initBackgroundCanvas();
     initCursorTrail();
+    initMusicPlayer();
   });
 })();
