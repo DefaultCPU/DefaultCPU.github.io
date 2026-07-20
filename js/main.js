@@ -43,57 +43,71 @@
     return div.innerHTML;
   }
 
-  // ---------- Gallery: San Joaquin Valley landmarks ----------
-  // All images from Wikimedia Commons, credited per license.
+  // ---------- Gallery: "landmarks of Stockton" ----------
+  // The bit: every caption is a real Stockton, CA place name, but the photo
+  // behind it is somewhere else entirely. All images from Wikimedia Commons,
+  // credited per license (click through and the joke gives itself away).
 
   const LANDMARKS = [
     {
-      caption: "Old Fresno Water Tower",
-      img: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Fresno_Water_Tower.JPG",
+      caption: "The Haggin Museum",
+      img: "https://upload.wikimedia.org/wikipedia/commons/1/12/Grand_Canyon_South_Rim_at_Sunset.jpg",
       credit: "Wikimedia Commons (CC0)",
-      page: "https://commons.wikimedia.org/wiki/File:Fresno_Water_Tower.JPG",
+      page: "https://commons.wikimedia.org/wiki/File:Grand_Canyon_South_Rim_at_Sunset.jpg",
     },
     {
-      caption: "Forestiere Underground Gardens",
-      img: "https://upload.wikimedia.org/wikipedia/commons/9/92/Forestiere_Underground_Gardens.JPG",
+      caption: "The Delta",
+      img: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Niagara_Falls_001.JPG",
       credit: "Wikimedia Commons (CC BY-SA 3.0)",
-      page: "https://commons.wikimedia.org/wiki/File:Forestiere_Underground_Gardens.JPG",
+      page: "https://commons.wikimedia.org/wiki/File:Niagara_Falls_001.JPG",
     },
     {
-      caption: "Modesto Arch",
-      img: "https://upload.wikimedia.org/wikipedia/commons/0/01/Modesto_Arch.JPG",
-      credit: "Wikimedia Commons (Public domain)",
-      page: "https://commons.wikimedia.org/wiki/File:Modesto_Arch.JPG",
+      caption: "Bob Hope Theatre",
+      img: "https://upload.wikimedia.org/wikipedia/commons/b/b7/Paris_-_The_Eiffel_Tower_in_spring_-_2307.jpg",
+      credit: "Wikimedia Commons (CC BY-SA 3.0)",
+      page: "https://commons.wikimedia.org/wiki/File:Paris_-_The_Eiffel_Tower_in_spring_-_2307.jpg",
     },
     {
-      caption: "Tower Theatre, Fresno",
-      img: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Tower_Theatre_Fresno_2.jpg",
+      caption: "Pixie Woods",
+      img: "https://upload.wikimedia.org/wikipedia/commons/6/62/80_-_Machu_Picchu_-_Juin_2009_-_edit.jpg",
+      credit: "Wikimedia Commons (CC BY-SA 3.0)",
+      page: "https://commons.wikimedia.org/wiki/File:80_-_Machu_Picchu_-_Juin_2009_-_edit.jpg",
+    },
+    {
+      caption: "Stockton Arena",
+      img: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Serengeti_wildebeest_migration_JF.jpg",
+      credit: "Wikimedia Commons (CC BY-SA 4.0)",
+      page: "https://commons.wikimedia.org/wiki/File:Serengeti_wildebeest_migration_JF.jpg",
+    },
+    {
+      caption: "Weber Point Events Center",
+      img: "https://upload.wikimedia.org/wikipedia/commons/c/c5/Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg",
       credit: "Wikimedia Commons (CC BY-SA 2.0)",
-      page: "https://commons.wikimedia.org/wiki/File:Tower_Theatre_Fresno_2.jpg",
+      page: "https://commons.wikimedia.org/wiki/File:Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg",
     },
     {
-      caption: "General Sherman Tree, Sequoia NP",
-      img: "https://upload.wikimedia.org/wikipedia/commons/5/57/General_Sherman_Sequoia_Tree.jpg",
-      credit: "Wikimedia Commons (CC0)",
-      page: "https://commons.wikimedia.org/wiki/File:General_Sherman_Sequoia_Tree.jpg",
-    },
-    {
-      caption: "Millerton Lake",
-      img: "https://upload.wikimedia.org/wikipedia/commons/8/89/Millerton_Lake_1.jpg",
-      credit: "Wikimedia Commons (CC BY 2.5)",
-      page: "https://commons.wikimedia.org/wiki/File:Millerton_Lake_1.jpg",
-    },
-    {
-      caption: "Stockton Skyline",
-      img: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Aerial_view_of_Stockton%2C_California_skyline.jpg",
+      caption: "University of the Pacific",
+      img: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Radcliffe_Camera_Oxford_2018_03.jpg",
       credit: "Wikimedia Commons (CC BY 4.0)",
-      page: "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Stockton,_California_skyline.jpg",
+      page: "https://commons.wikimedia.org/wiki/File:Radcliffe_Camera_Oxford_2018_03.jpg",
     },
     {
-      caption: "Kearney Mansion, Fresno",
-      img: "https://upload.wikimedia.org/wikipedia/commons/e/ed/Kearney_Park_Mansion.JPG",
+      caption: "Banner Island Ballpark",
+      img: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Panoramic_view_of_Oia%2C_Santorini_island_%28Thira%29%2C_Greece.jpg",
       credit: "Wikimedia Commons (CC BY-SA 3.0)",
-      page: "https://commons.wikimedia.org/wiki/File:Kearney_Park_Mansion.JPG",
+      page: "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Oia,_Santorini_island_(Thira),_Greece.jpg",
+    },
+    {
+      caption: "Dean DeCarli Waterfront Plaza",
+      img: "https://upload.wikimedia.org/wikipedia/commons/6/69/New_York_City_%28New_York%2C_USA%29%2C_Times_Square-Duffy_Square_--_2012_--_6380.jpg",
+      credit: "Wikimedia Commons (CC BY-SA 4.0)",
+      page: "https://commons.wikimedia.org/wiki/File:New_York_City_(New_York,_USA),_Times_Square-Duffy_Square_--_2012_--_6380.jpg",
+    },
+    {
+      caption: "Oak Park",
+      img: "https://upload.wikimedia.org/wikipedia/commons/1/10/20090529_Great_Wall_8185.jpg",
+      credit: "Wikimedia Commons (CC BY-SA 3.0)",
+      page: "https://commons.wikimedia.org/wiki/File:20090529_Great_Wall_8185.jpg",
     },
   ];
 
